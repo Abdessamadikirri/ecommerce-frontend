@@ -1,0 +1,168 @@
+.navbar {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:transparent;
+    height: 10vh;  
+    width:100vw;
+    padding: 5px 10px;
+    font-family: monospace;
+    font-style: italic;
+}
+.manu{
+    display: flex;
+    
+}
+
+.signup {
+    width: 50px;
+    height: 20px;
+    background-color: #d79b00;
+    margin-left: 10px;
+    border: none;
+    border-radius: 15px;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+    
+
+
+}
+.signup a {
+    text-decoration: none;
+    color:white;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 0.6rem;
+    font-weight: 500;
+    
+
+
+}
+.signup:hover{
+    transform: scale(1.05);
+}
+.login{
+    width: 50px;
+    height: 20px;
+    background-color: #d79b00;
+    border: none;
+    border-radius: 15px;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+    
+}
+.login  a {
+    text-decoration: none;
+    color:white;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 0.6rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.login:hover{
+    transform: scale(1.05);
+}
+
+.navbarlink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbarlink li {
+    list-style: none;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.navbarlink li a {
+    position: relative;
+    font-size: 0.6rem; 
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.7);
+    user-select: none;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbarlink li a:hover {
+    color: #d79b00;
+}
+
+.navbarlink li a::after {
+    content: '';
+    position: absolute;
+    border-radius: 1px;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #d79b00;
+    transition: width 0.3s ease;
+}
+
+.navbarlink li a:hover::after,
+.navbarlink li a.active::after {
+    width: 100%;
+}
+
+.image {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 600;
+    color:rgba(0, 0, 0, 0.5);
+    user-select: none;
+    font-family: Pacifico;
+    font-style: italic;
+    text-decoration: none;
+     
+}
+
+.mobile {
+    display: none;
+}
+
+.mobile i {
+    color:#d79b00;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+ 
+@media screen and (max-width: 500px) {
+    .navbarlink {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        right: 0px;
+        width: 150px;
+        background-color: rgba(235, 224, 183, 0.9);
+        padding: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+    }
+
+    .navbarlink li {
+        margin-bottom: 10px;
+    }
+
+    .navbarlink li a {
+        font-size: 1rem;
+        display: block;
+        padding: 8px 0;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    
+    .show {
+        display: flex ;
+    }
+}
+ 

@@ -1,0 +1,55 @@
+.footer{
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:linear-gradient(90deg, #d3f36c, #95f0df); 
+  
+    
+}
+.top{
+    
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   gap:100px;
+}
+.pleft{
+    font-family: monospace;
+     
+    margin-bottom: 0.5rem;
+    color:rgba(0, 0, 0, 0.7);
+}
+.pcenter a{
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.7);
+    font-size: 0.7rem;
+    transition: color 0.3s ease;
+}
+.pcenter a:hover {
+    color: rgb(251, 196, 56);
+}
+
+
+
+
+.pbuttom{
+   
+    color:rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+}
+@media screen and (max-width:500px){
+    .top{
+        gap:20px;
+     }
+   }
+ 
+   
+
+     
+    
+

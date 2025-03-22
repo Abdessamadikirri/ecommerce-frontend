@@ -1,0 +1,127 @@
+.hero{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+     width: 100%;
+     height: 90vh;
+     background:linear-gradient(90deg, #d3f36c, #95f0df); 
+     border-bottom-right-radius: 400px;
+     border-top-left-radius: 400px;
+     padding-left: 10px;
+     
+
+}
+.herocontent{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    width: 300px;
+    align-items: start;
+     
+    color: rgba(black black, black, 0.6px);
+}
+
+.honeycomb {
+    
+    height: 250px;
+    width:250px;
+    position: relative;
+    
+  }
+  
+  .hexagon {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease ;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+   
+  .hexagon1 {
+    background-image: url('/image2.jpg');
+    top: 30px;
+    left: 120px;
+    animation-delay: 0.4s;
+  }
+  .hexagon2 {
+    background-image: url('/image4.jpg');
+    top: 140px;
+    left:   122px;
+    animation-delay: 0.6s;
+  }
+  .hexagon3 {
+    background-image: url('/image6.jpeg');
+    top: 87px;
+    left: 23px;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d79b00; /* Honey-like color */
+    text-transform: uppercase;
+    font-family: monospace;
+    font-style: italic;
+    
+    margin-bottom: 1rem;
+    position: relative;
+    border-bottom: 2px solid  #d79b00;
+}
+
+ 
+
+.p {
+    font-size: 1rem;
+    color:rgba(0, 0, 0, 0.7);
+    max-width: 500px;
+    font-family: monospace;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.explore {
+    background-color: #d79b00;
+    padding: 5px 12px;
+    border-radius: 25px;
+   
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    font-family: monospace;
+    font-style: italic;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 0px 4px 0PX rgba(0, 0, 0, 0.4);
+}
+.explore a {
+  text-decoration: none;
+  color: white;
+}
+
+.explore:hover {
+    
+    transform: scale(1.05);
+}
