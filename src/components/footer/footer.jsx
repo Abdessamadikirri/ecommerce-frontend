@@ -14,7 +14,7 @@ export default function Footer() {
                     </div >
                     <div>
 
-                        <p className={styles.pcenter}><Link to="/home">Home</Link></p>
+                        <p className={styles.pcenter}><Link to="/">Home</Link></p>
                         <p className={styles.pcenter}><Link to="/contact">Contact</Link></p>
                         <p className={styles.pcenter}><Link to="/About">About </Link></p>
                         <p className={styles.pcenter}><Link to="/shop">Products</Link></p>
@@ -22,9 +22,9 @@ export default function Footer() {
                     </div>
                     <div>
 
-                        <p><Link><img src="facebook.svg" alt="" /></Link></p>
-                        <p><Link><img src="x.svg" alt="" /></Link></p>
-                        <p><Link><img src="insta.svg" alt="" /></Link></p>
+                        <p className={styles.right}><Link><img src="facebook.svg" alt="" /></Link></p>
+                        <p className={styles.right}><Link><img src="x.svg" alt="" /></Link></p>
+                        <p className={styles.right}><Link><img src="insta.svg" alt="" /></Link></p>
                     </div>
                 </div>
                 <div><p className={styles.pbuttom}>&copy; 2025 imrzargueoffla. All rights reserved.</p></div>

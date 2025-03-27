@@ -1,10 +1,10 @@
-.signuppage{
+.aboutpage{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 100%;
-     
+   
     overflow: hidden;
     font-family: Arial, Helvetica, sans - serif;
     user-select:none;
@@ -12,6 +12,7 @@
     background-color: white;
 }
 
-.signup{
+.about{
+    width: 100%;
     min-height: 80vh;
 }

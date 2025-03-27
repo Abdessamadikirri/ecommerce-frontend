@@ -1,0 +1,92 @@
+
+.form{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.formtag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(100px);
+    
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6);
+   
+    
+}
+
+.formgroup{
+   width: 100%;
+   padding-inline: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+}
+
+.formgroup input{
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 15px;
+    font-family: PT sans;
+    font-size: 0.6rem;
+
+    
+}
+ 
+
+
+.formgroup label{
+    padding-left: 2px;
+    font-family: PT sans;
+    font-size: 0.6rem;
+    color: black;
+}
+
+.title{
+    margin-bottom:10px;
+    margin-top: 10px;
+    font-family: PT sans;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #d79b00;
+    /* opacity: 0.9; */
+    font-weight: 500;
+}
+
+.formtag button {
+    width: 170px;
+    border: none;
+    outline: none;
+    background-color: #d79b00;
+    border-radius: 10px;
+    padding: 3px;
+    font-family: kanit;
+    font-style: italic;
+    font-weight:400 ;
+    color: white;
+    cursor: pointer;
+}
+
+.links{
+    font-size: 0.5rem;
+    font-family: PT sans;
+    font-style: oblique;
+    color: black;
+}
+.p{
+    font-size: 0.5rem;
+    font-family: PT sans;
+    font-style: italic;
+    color: black; 
+    padding-left: 5px;
+}
+.div{
+    display: flex;
+    padding: 10px;
+}

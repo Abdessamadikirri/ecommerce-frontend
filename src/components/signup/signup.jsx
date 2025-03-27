@@ -1,9 +1,13 @@
 import { useState } from "react"
-import axios from 'axios';
-import Cookies from 'js-cookie';
+import styles from "./signup.module.css"
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { register } from "../../redux/actions/userAction";
 
 export default function Signup() {
     const [formdata, seformdata] = useState({ name: '', email: '', password: '', role: 'customer', image: '' })
+    const dispatch = useDispatch()
+
 
     const handlform = (e) => {
         const { name, value } = e.target
@@ -12,38 +16,33 @@ export default function Signup() {
             [name]: value
         }))
     }
-    const handlSubmit = async (e) => {
-        console.log(formdata)
+    const handlsubmit = (e) => {
         e.preventDefault();
-        await axios.get('http://localhost:8000/sanctum/csrf-cookie', {
-            withCredentials: true
-        })
-        const csrfToken = Cookies.get('XSRF-TOKEN');
-        try {
-            const response = await axios.post("http://localhost:8000/api/register", formdata, {
-                headers: {
-                    'X-XSRF-TOKEN': csrfToken
-                }, withCredentials: true
-            });
-            console.log('Registration Success:', response.data);
-
-        } catch (error) {
-            console.error('Registration Error:', error);
-        }
-
-
+        dispatch(register(formdata))
     }
+
+
     return (
-        <div>
-            <h1>Sign up </h1>
-            <form onSubmit={handlSubmit}>
-                <label htmlFor="name">Username</label><br />
-                <input type="text" id="name" name="name" onChange={handlform} /><br />
-                <label htmlFor="email">Email</label><br />
-                <input type="email" id="email" name="email" onChange={handlform} /><br />
-                <label htmlFor="password">password</label><br />
-                <input type="password" id="password" name="password" onChange={handlform} /><br />
+        <div className={styles.form}>
+            <form className={styles.formtag} onSubmit={handlsubmit}>
+                <h1 className={styles.title}>Sign up </h1>
+                <div className={styles.formgroup}>
+                    <label htmlFor="name">Username</label>
+                    <input type="text" id="name" name="name" onChange={handlform} />
+                </div>
+                <div className={styles.formgroup}>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" name="email" onChange={handlform} />
+                </div>
+                <div className={styles.formgroup}>
+                    <label htmlFor="password">password</label>
+                    <input type="password" id="password" name="password" onChange={handlform} />
+                </div>
                 <button type="submit">Sign up </button>
+                <div className={styles.div}>
+
+                    <p className={styles.p}>have  already an acount? <Link className={styles.links} to="/login">Login</Link></p>
+                </div>
 
             </form>
         </div>

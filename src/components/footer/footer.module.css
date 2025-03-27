@@ -15,32 +15,50 @@
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   padding: 10px;
+   /* padding: 10px; */
    gap:100px;
 }
 .pleft{
-    font-family: monospace;
-     
+    font-family: PT sans;
+    
+    font-style: italic;
+    font-size: 0.5rem;
     margin-bottom: 0.5rem;
     color:rgba(0, 0, 0, 0.7);
+    align-self: center;
+
+}
+.pcenter{
+     align-self: center;
 }
 .pcenter a{
+    font-family: PT sans;
+    font-style: italic;
     text-decoration: none;
     color:rgba(0, 0, 0, 0.7);
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     transition: color 0.3s ease;
 }
 .pcenter a:hover {
     color: rgb(251, 196, 56);
+     
 }
 
+.pright{
+    align-self: center;
 
+}
+
+ 
 
 
 .pbuttom{
-   
+   font-family: PT sans;
+   font-style: italic;
+   font-weight: bold;
+    
     color:rgba(0, 0, 0, 0.7);
-    font-size: 0.8rem;
+    font-size: 0.5rem;
 }
 @media screen and (max-width:500px){
     .top{

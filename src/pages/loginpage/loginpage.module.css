@@ -1,4 +1,4 @@
-.signuppage{
+.loginpage{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -12,6 +12,10 @@
     background-color: white;
 }
 
-.signup{
+.login{
+    width: 100%;
     min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

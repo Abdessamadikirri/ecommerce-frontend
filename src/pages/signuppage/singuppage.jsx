@@ -6,7 +6,9 @@ export default function Signuppage() {
     return (
         <div className={styles.signuppage}>
             <NavBar />
-            <Signup />
+            <div className={styles.signup}>
+                <Signup />
+            </div>
             <Footer />
         </div>
     )

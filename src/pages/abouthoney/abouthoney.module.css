@@ -1,8 +1,8 @@
-.signuppage{
+.abouthoneypage{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     width: 100%;
      
     overflow: hidden;
@@ -11,7 +11,8 @@
     /* background:linear-gradient(90deg, #d3f36c, #95f0df); */
     background-color: white;
 }
-
-.signup{
+.abouthoney{
+    width: 100%;
     min-height: 80vh;
 }
+ 
