@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './navbar.module.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,7 +8,7 @@ export default function NavBar() {
     const [isClicked, setClicked] = useState(false);
     const isauth = useSelector((state) => state.user.isauth)
     const [isprofileclicked, setisprofileclicked] = useState(false)
-
+    const navigate = useNavigate()
     const handleprofile = () => {
         setisprofileclicked(state => !state)
     }
@@ -16,6 +16,8 @@ export default function NavBar() {
     const dispatch = useDispatch();
     const handlelogout = () => {
         dispatch(logout())
+        navigate('/')
+
     }
     return (
         <header>

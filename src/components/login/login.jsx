@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './login.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/actions/userAction';
@@ -9,6 +9,7 @@ export default function Login() {
     const dispatch = useDispatch()
     const user = useSelector(state => state.user)
     const [isfail, setisfail] = useState(false)
+    const navigate = useNavigate()
     useEffect(() => {
         setisfail(!!user?.message);
     }, [user])
@@ -28,6 +29,7 @@ export default function Login() {
     const handlsubmit = async (e) => {
         e.preventDefault();
         dispatch(login(formdata))
+        navigate('/shop')
     }
     return (
         <div className={styles.form}>

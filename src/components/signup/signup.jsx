@@ -1,13 +1,13 @@
 import { useState } from "react"
 import styles from "./signup.module.css"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/actions/userAction";
 
 export default function Signup() {
     const [formdata, seformdata] = useState({ name: '', email: '', password: '', role: 'customer', image: '' })
     const dispatch = useDispatch()
-
+    const navigate = useNavigate()
 
     const handlform = (e) => {
         const { name, value } = e.target
@@ -19,6 +19,7 @@ export default function Signup() {
     const handlsubmit = (e) => {
         e.preventDefault();
         dispatch(register(formdata))
+        navigate('/shop')
     }
 
 

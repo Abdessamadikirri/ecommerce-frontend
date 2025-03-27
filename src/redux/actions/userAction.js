@@ -26,7 +26,7 @@ export const login =(formdata) =>{
     return async (dispatch) =>{
 
         try {
-        // await axios.get("http://localhost:8000/sanctum/csrf-cookie",{withCredentials:true})
+        await axios.get("http://localhost:8000/sanctum/csrf-cookie",{withCredentials:true})
         const csrftoken=Cookies.get("XSRF-TOKEN")
  
         const response = await axios.post("http://localhost:8000/api/login",formdata,{

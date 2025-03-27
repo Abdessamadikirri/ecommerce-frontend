@@ -11,8 +11,14 @@
     /* background:linear-gradient(90deg, #d3f36c, #95f0df); */
     background-color: white;
 }
-.middlecontent{
+.middleconten{
      
     width: 100%;
-    min-height: 400px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
