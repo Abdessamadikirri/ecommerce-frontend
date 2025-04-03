@@ -37,7 +37,7 @@ export default function NavBar() {
                             <p onClick={handleprofile} className={styles.profileimage} to="/profile" ><img src="profile.svg" alt="profile image" /></p></>) : (<><button className={styles.login}> <Link to="/Login">Login</Link></button>
                                 <button className={styles.signup}> <Link to="/Signup">Sign up </Link></button></>)}
 
-                        {isauth && (<div className={`${styles.profilelink} ${isprofileclicked ? styles.apear : ""}`}>
+                        {isauth && isprofileclicked && (<div className={`${styles.profilelink} ${isprofileclicked ? styles.apear : ""}`}>
                             <Link className={styles.profile} to="/profile"> Profile</Link>
                             <button onClick={handlelogout} className={styles.logout}>Logout</button>
                         </div>)}

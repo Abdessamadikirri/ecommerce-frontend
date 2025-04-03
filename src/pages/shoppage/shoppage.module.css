@@ -6,9 +6,9 @@
     width: 100%;
     
     overflow: hidden;
-    font-family: Arial, Helvetica, sans - serif;
+     
     user-select:none;
-    /* background:linear-gradient(90deg, #d3f36c, #95f0df); */
+    
     background-color: white;
 }
 .middleconten{

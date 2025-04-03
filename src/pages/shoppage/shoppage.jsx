@@ -1,7 +1,5 @@
 import styles from "./shoppage.module.css"
 
-import Footer from "../../components/footer/footer";
-import NavBar from "../../components/header/navbar";
 import Loading from "../../components/loading/loading";
 import { fetchProducts } from "../../redux/actions/productAction";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,11 +13,11 @@ export default function Shoppage() {
     }, [dispatch])
     return (
         <div className={styles.shoppage}>
-            <NavBar />
+
             <div className={styles.middleconten}>
                 {isloading ? <Loading /> : <ProductsCard />}
             </div>
-            <Footer />
+
         </div>
     );
 }
